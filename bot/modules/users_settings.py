@@ -224,12 +224,12 @@ async def get_user_settings(from_user, stype="main"):
         buttons.data_button("Close", f"userset {user_id} close", position="footer")
 
         text = f"""⌬ <b>User Settings :</b>
-
-╭ <b>Name</b> → {user_name}
-┊ <b>UserID</b> → #ID{user_id}
-┊ <b>Username</b> → @{from_user.username}
-┊ <b>Telegram DC</b> → {from_user.dc_id}
-╰ <b>Telegram Lang</b> → {Language.get(lc).display_name() if (lc := from_user.language_code) else "N/A"}"""
+│
+┟ <b>Name:</b> {user_name}
+┠ <b>UserID:</b> #ID{user_id}
+┠ <b>Username:</b> @{from_user.username}
+┠ <b>Telegram DC:</b> {from_user.dc_id}
+┖ <b>Telegram Lang:</b> {Language.get(lc).display_name() if (lc := from_user.language_code) else "N/A"}"""
 
         btns = buttons.build_menu(2)
 
@@ -264,10 +264,11 @@ async def get_user_settings(from_user, stype="main"):
         btns = buttons.build_menu(1)
 
         text = f"""⌬ <b>General Settings :</b>
-╭ <b>Name</b> → {user_name}
-┊ <b>Default Upload Package</b> → <b>{du}</b>
-┊ <b>Default Usage Mode</b> → <b>{tr}'s</b> token/config
-╰ <b>Cookie Mode</b> → <b>{cookie_mode}</b>
+│
+┟ <b>Name:</b> {user_name}
+┠ <b>Default Upload Package:</b> <b>{du}</b>
+┠ <b>Default Usage Mode:</b> <b>{tr}'s</b> token/config
+┖ <b>Cookie Mode:</b> <b>{cookie_mode}</b>
 """
 
     elif stype == "leech":
@@ -404,19 +405,20 @@ async def get_user_settings(from_user, stype="main"):
         btns = buttons.build_menu(2)
 
         text = f"""⌬ <b>Leech Settings :</b>
-╭ <b>Name</b> → {user_name}
-┊ Leech Type → <b>{ltype}</b>
-┊ Custom Thumbnail → <b>{thumbmsg}</b>
-┊ Leech Split Size → <b>{get_readable_file_size(split_size)}</b>
-┊ Equal Splits → <b>{equal_splits}</b>
-┊ Media Group → <b>{media_group}</b>
-┊ Leech Prefix → <code>{escape(lprefix)}</code>
-┊ Leech Suffix → <code>{escape(lsuffix)}</code>
-┊ Leech Caption → <code>{escape(lcap)}</code>
-┊ Leech Destination → <code>{leech_dest}</code>
-┊ Leech by <b>{leech_method}</b> session
-┊ Mixed Leech → <b>{hybrid_leech}</b>
-╰ Thumbnail Layout → <b>{thumb_layout}</b>
+│
+┟ <b>Name:</b> {user_name}
+┠ Leech Type: <b>{ltype}</b>
+┠ Custom Thumbnail: <b>{thumbmsg}</b>
+┠ Leech Split Size: <b>{get_readable_file_size(split_size)}</b>
+┠ Equal Splits: <b>{equal_splits}</b>
+┠ Media Group: <b>{media_group}</b>
+┠ Leech Prefix: <code>{escape(lprefix)}</code>
+┠ Leech Suffix: <code>{escape(lsuffix)}</code>
+┠ Leech Caption: <code>{escape(lcap)}</code>
+┠ Leech Destination: <code>{leech_dest}</code>
+┠ Leech by: <b>{leech_method}</b> session
+┠ Mixed Leech: <b>{hybrid_leech}</b>
+┖ Thumbnail Layout: <b>{thumb_layout}</b>
 """
 
     elif stype == "rclone":
@@ -446,10 +448,11 @@ async def get_user_settings(from_user, stype="main"):
             rcflags = "None"
 
         text = f"""⌬ <b>RClone Settings :</b>
-╭ <b>Name</b> → {user_name}
-┊ <b>Rclone Config</b> → <b>{rccmsg}</b>
-┊ <b>Rclone Flags</b> → <code>{rcflags}</code>
-╰ <b>Rclone Path</b> → <code>{rccpath}</code>"""
+│
+┟ <b>Name:</b> {user_name}
+┠ <b>Rclone Config:</b> <b>{rccmsg}</b>
+┠ <b>Rclone Flags:</b> <code>{rcflags}</code>
+┖ <b>Rclone Path:</b> <code>{rccpath}</code>"""
 
     elif stype == "gdrive":
         buttons.data_button("token.pickle", f"userset {user_id} menu TOKEN_PICKLE")
@@ -485,11 +488,12 @@ async def get_user_settings(from_user, stype="main"):
         btns = buttons.build_menu(2)
 
         text = f"""⌬ <b>GDrive Tools Settings :</b>
-╭ <b>Name</b> → {user_name}
-┊ <b>Gdrive Token</b> → <b>{tokenmsg}</b>
-┊ <b>Gdrive ID</b> → <code>{gdrive_id}</code>
-┊ <b>Index URL</b> → <code>{index}</code>
-╰ <b>Stop Duplicate</b> → <b>{sd_msg}</b>"""
+│
+┟ <b>Name:</b> {user_name}
+┠ <b>Gdrive Token:</b> <b>{tokenmsg}</b>
+┠ <b>Gdrive ID:</b> <code>{gdrive_id}</code>
+┠ <b>Index URL:</b> <code>{index}</code>
+┖ <b>Stop Duplicate:</b> <b>{sd_msg}</b>"""
     elif stype == "mirror":
         buttons.data_button("RClone Tools", f"userset {user_id} rclone")
         rccmsg = "Exists" if await aiopath.exists(rclone_conf) else "Not Exists"
@@ -524,13 +528,14 @@ async def get_user_settings(from_user, stype="main"):
         btns = buttons.build_menu(1)
 
         text = f"""⌬ <b>Mirror Settings :</b>
-╭ <b>Name</b> → {user_name}
-┊ <b>Rclone Config</b> → <b>{rccmsg}</b>
-┊ <b>Rclone Path</b> → <code>{rccpath}</code>
-┊ <b>Gdrive Token</b> → <b>{tokenmsg}</b>
-┊ <b>Gdrive ID</b> → <code>{gdrive_id}</code>
-┊ <b>Index Link</b> → <code>{index}</code>
-╰ <b>Stop Duplicate</b> → <b>{sd_msg}</b>
+│
+┟ <b>Name:</b> {user_name}
+┠ <b>Rclone Config:</b> <b>{rccmsg}</b>
+┠ <b>Rclone Path:</b> <code>{rccpath}</code>
+┠ <b>Gdrive Token:</b> <b>{tokenmsg}</b>
+┠ <b>Gdrive ID:</b> <code>{gdrive_id}</code>
+┠ <b>Index Link:</b> <code>{index}</code>
+┖ <b>Stop Duplicate:</b> <b>{sd_msg}</b>
 """
 
     elif stype == "ffset":
@@ -555,8 +560,8 @@ async def get_user_settings(from_user, stype="main"):
         btns = buttons.build_menu(2)
 
         text = f"""⌬ <b>FF Settings :</b>
-╭ <b>Name</b> → {user_name}
-╰ <b>FFmpeg Commands</b> → {ffc}"""
+╭ <b>Name:</b> {user_name}
+╰ <b>FFmpeg Commands:</b> {ffc}"""
 
     elif stype == "advanced":
         buttons.data_button(
@@ -607,12 +612,13 @@ async def get_user_settings(from_user, stype="main"):
         btns = buttons.build_menu(1)
 
         text = f"""⌬ <b>Advanced Settings :</b>
-╭ <b>Name</b> → {user_name}
-┊ <b>Name Swaps</b> → {ns_msg}
-┊ <b>Excluded Extensions</b> → <code>{ex_ex}</code>
-┊ <b>Upload Paths</b> → <b>{upload_paths}</b>
-┊ <b>YT-DLP Options</b> → <code>{ytopt}</code>
-╰ <b>YT User Cookie File</b> → <b>{user_cookie_msg}</b>"""
+│
+┟ <b>Name:</b> {user_name}
+┠ <b>Name Swaps:</b> {ns_msg}
+┠ <b>Excluded Extensions:</b> <code>{ex_ex}</code>
+┠ <b>Upload Paths:</b> <b>{upload_paths}</b>
+┠ <b>YT-DLP Options:</b> <code>{ytopt}</code>
+┖ <b>YT User Cookie File:</b> <b>{user_cookie_msg}</b>"""
 
     return text, btns
 
@@ -785,11 +791,11 @@ async def get_menu(option, message, user_id):
     elif option == "LEECH_SPLIT_SIZE":
         val = get_readable_file_size(val)
     text = f"""⌬ <b><u>Menu Settings :</u></b>
-
-╭ <b>Option</b> → {option}
-┊ <b>Option's Value</b> → {val if val else "<b>Not Exists</b>"}
-┊ <b>Default Input Type</b> → {user_settings_text[option][0]}
-╰ <b>Description</b> → {user_settings_text[option][1]}
+│
+┟ <b>Option:</b> {option}
+┠ <b>Option's Value:</b> {val if val else "<b>Not Exists</b>"}
+┠ <b>Default Input Type:</b> {user_settings_text[option][0]}
+┖ <b>Description:</b> {user_settings_text[option][1]}
 """
     await edit_message(message, text, buttons.build_menu(2))
 

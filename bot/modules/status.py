@@ -151,10 +151,8 @@ async def task_status(_, message):
         msg = f"""{response}
 
 ⌬ <b><u>Bot Stats</u></b>
-╭ <b>CPU</b> → {cpu_percent()}%
-┊ <b>RAM</b> → {virtual_memory().percent}%
-┊ <b>Free</b> → {free}
-╰ <b>UP</b> → {currentTime}
+┟ <b>CPU:</b> {cpu_percent()}% | <b>F:</b> {free} [{round(100 - disk_usage(DOWNLOAD_DIR).percent, 1)}%]
+┖ <b>RAM:</b> {virtual_memory().percent}% | <b>UP:</b> {currentTime}
 """
         reply_message = await send_message(message, msg)
         await auto_delete_message(message, reply_message)
@@ -291,17 +289,17 @@ async def status_pages(_, query):
 
         msg = f"""㊂ <b>Tasks Overview</b> :
         
-╭ <b>Download:</b> {tasks["Download"]} | <b>Upload:</b> {tasks["Upload"]}
-┊ <b>Seed:</b> {tasks["Seed"]} | <b>Archive:</b> {tasks["Archive"]}
-┊ <b>Extract:</b> {tasks["Extract"]} | <b>Split:</b> {tasks["Split"]}
-┊ <b>QueueDL:</b> {tasks["QueueDl"]} | <b>QueueUP:</b> {tasks["QueueUp"]}
-┊ <b>Clone:</b> {tasks["Clone"]} | <b>CheckUp:</b> {tasks["CheckUp"]}
-┊ <b>Paused:</b> {tasks["Pause"]} | <b>SamVideo:</b> {tasks["SamVid"]}
-╰ <b>Convert:</b> {tasks["ConvertMedia"]} | <b>FFmpeg:</b> {tasks["FFmpeg"]}
-
-╭ <b>Total Download Speed:</b> {get_readable_file_size(dl_speed)}/s
-┊ <b>Total Upload Speed:</b> {get_readable_file_size(up_speed)}/s
-╰ <b>Total Seeding Speed:</b> {get_readable_file_size(seed_speed)}/s
+┎ <b>Download:</b> {tasks["Download"]} | <b>Upload:</b> {tasks["Upload"]}
+┠ <b>Seed:</b> {tasks["Seed"]} | <b>Archive:</b> {tasks["Archive"]}
+┠ <b>Extract:</b> {tasks["Extract"]} | <b>Split:</b> {tasks["Split"]}
+┠ <b>QueueDL:</b> {tasks["QueueDl"]} | <b>QueueUP:</b> {tasks["QueueUp"]}
+┠ <b>Clone:</b> {tasks["Clone"]} | <b>CheckUp:</b> {tasks["CheckUp"]}
+┠ <b>Paused:</b> {tasks["Pause"]} | <b>SamVideo:</b> {tasks["SamVid"]}
+┞ <b>Convert:</b> {tasks["ConvertMedia"]} | <b>FFmpeg:</b> {tasks["FFmpeg"]}
+│
+┟ <b>Total Download Speed:</b> {get_readable_file_size(dl_speed)}/s
+┠ <b>Total Upload Speed:</b> {get_readable_file_size(up_speed)}/s
+┖ <b>Total Seeding Speed:</b> {get_readable_file_size(seed_speed)}/s
 """
         button = ButtonMaker()
         button.data_button("Back", f"status {data[1]} ref")

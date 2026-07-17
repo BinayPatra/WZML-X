@@ -12,8 +12,6 @@ class Config:
     BOT_MAX_TASKS = 0
     BOT_PM = False
     CMD_SUFFIX = ""
-    CUSTOM_BOT_HEADER = "Downloader Zone"
-    CUSTOM_BOT_HEADER_LINK = "https://t.me/DownloaderZoneGateway"
     DEFAULT_LANG = "en"
     DATABASE_URL = ""
     DEFAULT_UPLOAD = "rc"
