@@ -58,22 +58,22 @@ user_settings_text = {
     "THUMBNAIL": (
         "Photo or Doc",
         "Custom Thumbnail is used as the thumbnail for the files you upload to telegram in media or document mode.",
-        "<i>Send a photo to save it as custom thumbnail.</i> \n╰ <b>Time Left :</b> <code>60 sec</code>",
+        "<i>Send a photo to save it as custom thumbnail.</i> \n┗ <b>Time Left :</b> <code>60 sec</code>",
     ),
     "RCLONE_CONFIG": (
         "",
         "",
-        "<i>Send your <code>rclone.conf</code> file to use as your Upload Dest to RClone.</i> \n╰ <b>Time Left :</b> <code>60 sec</code>",
+        "<i>Send your <code>rclone.conf</code> file to use as your Upload Dest to RClone.</i> \n┗ <b>Time Left :</b> <code>60 sec</code>",
     ),
     "TOKEN_PICKLE": (
         "",
         "",
-        "<i>Send your <code>token.pickle</code> to use as your Upload Dest to GDrive</i> \n╰ <b>Time Left :</b> <code>60 sec</code>",
+        "<i>Send your <code>token.pickle</code> to use as your Upload Dest to GDrive</i> \n┗ <b>Time Left :</b> <code>60 sec</code>",
     ),
     "LEECH_SPLIT_SIZE": (
         "",
         "",
-        f"Send Leech split size in bytes or use gb or mb. Example: 40000000 or 2.5gb or 1000mb. PREMIUM_USER: {TgClient.IS_PREMIUM_USER}.</i> \n╰ <b>Time Left :</b> <code>60 sec</code>",
+        f"Send Leech split size in bytes or use gb or mb. Example: 40000000 or 2.5gb or 1000mb. PREMIUM_USER: {TgClient.IS_PREMIUM_USER}.</i> \n┗ <b>Time Left :</b> <code>60 sec</code>",
     ),
     "LEECH_DUMP_CHAT": (
         "",
@@ -83,32 +83,32 @@ user_settings_text = {
 * u:id/@username(u: means leech by user) This incase OWNER added USER_STRING_SESSION.
 * h:id/@username(hybrid leech) h: to upload files by bot and user based on file size.
 * id/@username|topic_id(leech in specific chat and topic) add | without space and write topic id after chat id or username.
-╰ <b>Time Left :</b> <code>60 sec</code>""",
+┗ <b>Time Left :</b> <code>60 sec</code>""",
     ),
     "LEECH_PREFIX": (
         "",
         "",
-        "Send Leech Filename Prefix. You can add HTML tags. Example: <code>@mychannel</code>.</i> \n╰ <b>Time Left :</b> <code>60 sec</code>",
+        "Send Leech Filename Prefix. You can add HTML tags. Example: <code>@mychannel</code>.</i> \n┗ <b>Time Left :</b> <code>60 sec</code>",
     ),
     "LEECH_SUFFIX": (
         "",
         "",
-        "Send Leech Filename Suffix. You can add HTML tags. Example: <code>@mychannel</code>.</i> \n╰ <b>Time Left :</b> <code>60 sec</code>",
+        "Send Leech Filename Suffix. You can add HTML tags. Example: <code>@mychannel</code>.</i> \n┗ <b>Time Left :</b> <code>60 sec</code>",
     ),
     "LEECH_CAPTION": (
         "",
         "",
-        "Send Leech Caption. You can add HTML tags. Example: <code>@mychannel</code>.</i> \n╰ <b>Time Left :</b> <code>60 sec</code>",
+        "Send Leech Caption. You can add HTML tags. Example: <code>@mychannel</code>.</i> \n┗ <b>Time Left :</b> <code>60 sec</code>",
     ),
     "THUMBNAIL_LAYOUT": (
         "",
         "",
-        "Send thumbnail layout (widthxheight, 2x2, 3x3, 2x4, 4x4, ...). Example: 3x3.</i> \n╰ <b>Time Left :</b> <code>60 sec</code>",
+        "Send thumbnail layout (widthxheight, 2x2, 3x3, 2x4, 4x4, ...). Example: 3x3.</i> \n┗ <b>Time Left :</b> <code>60 sec</code>",
     ),
     "RCLONE_PATH": (
         "",
         "",
-        "Send Rclone Path. If you want to use your rclone config edit using owner/user config from usetting or add mrcc: before rclone path. Example mrcc:remote:folder. </i> \n╰ <b>Time Left :</b> <code>60 sec</code>",
+        "Send Rclone Path. If you want to use your rclone config edit using owner/user config from usetting or add mrcc: before rclone path. Example mrcc:remote:folder. </i> \n┗ <b>Time Left :</b> <code>60 sec</code>",
     ),
     "RCLONE_FLAGS": (
         "",
@@ -118,29 +118,29 @@ user_settings_text = {
     "GDRIVE_ID": (
         "",
         "",
-        "Send Gdrive ID. If you want to use your token.pickle edit using owner/user token from usetting or add mtp: before the id. Example: mtp:F435RGGRDXXXXXX . </i> \n╰ <b>Time Left :</b> <code>60 sec</code>",
+        "Send Gdrive ID. If you want to use your token.pickle edit using owner/user token from usetting or add mtp: before the id. Example: mtp:F435RGGRDXXXXXX . </i> \n┗ <b>Time Left :</b> <code>60 sec</code>",
     ),
     "INDEX_URL": (
         "",
         "",
-        "Send Index URL for your gdrive option. </i> \n╰ <b>Time Left :</b> <code>60 sec</code>",
+        "Send Index URL for your gdrive option. </i> \n┗ <b>Time Left :</b> <code>60 sec</code>",
     ),
     "UPLOAD_PATHS": (
         "",
         "",
-        "Send Dict of keys that have path values. Example: {'path 1': 'remote:rclonefolder', 'path 2': 'gdrive1 id', 'path 3': 'tg chat id', 'path 4': 'mrcc:remote:', 'path 5': b:@username} . </i> \n╰ <b>Time Left :</b> <code>60 sec</code>",
+        "Send Dict of keys that have path values. Example: {'path 1': 'remote:rclonefolder', 'path 2': 'gdrive1 id', 'path 3': 'tg chat id', 'path 4': 'mrcc:remote:', 'path 5': b:@username} . </i> \n┗ <b>Time Left :</b> <code>60 sec</code>",
     ),
     "EXCLUDED_EXTENSIONS": (
         "",
         "",
-        "Send exluded extenions seperated by space without dot at beginning. </i> \n╰ <b>Time Left :</b> <code>60 sec</code>",
+        "Send exluded extenions seperated by space without dot at beginning. </i> \n┗ <b>Time Left :</b> <code>60 sec</code>",
     ),
     "NAME_SWAP": (
         "",
         "",
         """<i>Send your Name Swap. You can add pattern instead of normal text according to the format.</i>
 <b>Full Documentation Guide</b> <a href="https://t.me/WZML_X/77">Click Here</a>
-╰ <b>Time Left :</b> <code>60 sec</code>
+┗ <b>Time Left :</b> <code>60 sec</code>
 """,
     ),
     "YT_DLP_OPTIONS": (
@@ -150,7 +150,7 @@ user_settings_text = {
 Example: {"format": "bv*+mergeall[vcodec=none]", "nocheckcertificate": True, "playliststart": 10, "fragment_retries": float("inf"), "matchtitle": "S13", "writesubtitles": True, "live_from_start": True, "postprocessor_args": {"ffmpeg": ["-threads", "4"]}, "wait_for_video": (5, 100), "download_ranges": [{"start_time": 0, "end_time": 10}]}
 Check all yt-dlp api options from this <a href='https://github.com/yt-dlp/yt-dlp/blob/master/yt_dlp/YoutubeDL.py#L184'>FILE</a> or use this <a href='https://t.me/mltb_official_channel/177'>script</a> to convert cli arguments to api options.
 
-<i>Send dict of YT-DLP Options according to format.</i> \n╰ <b>Time Left :</b> <code>60 sec</code>""",
+<i>Send dict of YT-DLP Options according to format.</i> \n┗ <b>Time Left :</b> <code>60 sec</code>""",
     ),
     "FFMPEG_CMDS": (
         "",
@@ -166,7 +166,7 @@ Here I will explain how to use mltb.* which is reference to files you want to wo
 3. Third cmd: the input in mltb.m4a so this cmd will work only on m4a audios and the output is mltb.mp3 so the output extension is mp3.
 4. Fourth cmd: the input is mltb.audio so this cmd will work on all audios and the output is mltb.mp3 so the output extension is mp3.
 
-<i>Send dict of FFMPEG_CMDS Options according to format.</i> \n╰ <b>Time Left :</b> <code>60 sec</code>
+<i>Send dict of FFMPEG_CMDS Options according to format.</i> \n┗ <b>Time Left :</b> <code>60 sec</code>
 """,
     ),
     "METADATA_CMDS": (
@@ -174,7 +174,7 @@ Here I will explain how to use mltb.* which is reference to files you want to wo
         "",
         """<i>Send your Meta data. You can according to the format title="Join @WZML_X".</i>
 <b>Full Documentation Guide</b> <a href="https://t.me/WZML_X/">Click Here</a>
-╰ <b>Time Left :</b> <code>60 sec</code>
+┗ <b>Time Left :</b> <code>60 sec</code>
 """,
     ),
     "USER_COOKIE_FILE": (
@@ -560,8 +560,9 @@ async def get_user_settings(from_user, stype="main"):
         btns = buttons.build_menu(2)
 
         text = f"""⌬ <b>FF Settings :</b>
-╭ <b>Name:</b> {user_name}
-╰ <b>FFmpeg Commands:</b> {ffc}"""
+
+┟ <b>Name:</b> {user_name}
+┟ <b>FFmpeg Commands:</b> {ffc}"""
 
     elif stype == "advanced":
         buttons.data_button(
@@ -831,7 +832,7 @@ async def event_handler(client, query, pfunc, rfunc, photo=False, document=False
             msg = await client.get_messages(query.message.chat.id, query.message.id)
             text = msg.text.split("\n")
             text[-1] = (
-                f"╰ <b>Time Left :</b> <code>{round(60 - (time() - start_time), 2)} sec</code>"
+                f"┗ <b>Time Left :</b> <code>{round(60 - (time() - start_time), 2)} sec</code>"
             )
             await edit_message(msg, "\n".join(text), msg.reply_markup)
     client.remove_handler(*handler)

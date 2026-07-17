@@ -375,10 +375,10 @@ class TaskListener(TaskConfig):
                     chat_id, msg_id = link.split("/")[-2:]
                     fmsg += f"{index}. <a href='{link}'>{name}</a>"
         else:
-            msg += f"\n╰ <b>Type:</b> {mime_type}"
+            msg += f"\n│\n┟ <b>Type:</b> {mime_type}"
             if mime_type == "Folder":
-                msg += f"\n╭ <b>SubFolders:</b> {folders}"
-                msg += f"\n╰ <b>Files:</b> {files}"
+                msg += f"\n┠ <b>SubFolders:</b> {folders}"
+                msg += f"\n┠ <b>Files:</b> {files}"
             if (
                 link
                 or rclone_path
